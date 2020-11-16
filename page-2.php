@@ -1,7 +1,4 @@
 <?php
-/*
-    Template Name: Page No Title
-*/
 
 get_header() ?>
     <?php
