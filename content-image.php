@@ -1,6 +1,4 @@
-<div class="thumbnail-img"><?php the_post_thumbnail('thumbnail') ?></div>
-<h1>Image Post: <?php the_title(); ?></h1>
-<small>Posted on: <?php the_time('F j, Y'); ?>, in <?php the_category(); ?></small>
+<h3>IMAGE POST: <?php the_title(); ?></h3>
+<div class="thumbnail-img"><?php the_post_thumbnail('large'); ?></div>
 
-<p><?php the_content(); ?></p>
-<hr/>
+<hr>
