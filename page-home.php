@@ -4,7 +4,7 @@
         <?php
         $args = array(
             'type' => 'post',
-            'posts_per_page' => 1
+            'posts_per_page' => 3
         );
         $lastBlog = new WP_Query($args);
         if ($lastBlog->have_posts()) :
