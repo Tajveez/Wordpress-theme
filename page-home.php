@@ -1,20 +1,23 @@
 <?php get_header() ?>
 <div class="row">
-    <div class="col-xs-12">
-        <?php
-        $args = array(
-            'type' => 'post',
-            'posts_per_page' => 3
-        );
-        $lastBlog = new WP_Query($args);
-        if ($lastBlog->have_posts()) :
-            while ($lastBlog->have_posts()) : $lastBlog->the_post();
-                get_template_part('content', get_post_format());
-            endwhile;
-        endif;
-        wp_reset_postdata();
-        ?>
-    </div>
+    <?php
+    $args = array(
+        'type' => 'post',
+        'posts_per_page' => 3
+    );
+    $lastBlog = new WP_Query($args);
+    if ($lastBlog->have_posts()) :
+        while ($lastBlog->have_posts()) : $lastBlog->the_post(); ?>
+            <div class="col-xs-12 col-sm-4">
+                <?php get_template_part('content', 'featured'); ?>
+            </div>
+    <?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+    ?>
+</div>
+<div class="row">
     <div class="col-xs-12 col-sm-8">
         <?php
         if (have_posts()) :
