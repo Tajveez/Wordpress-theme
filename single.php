@@ -12,6 +12,11 @@ if (have_posts()) :
         <?php endif; ?>
         <p><?php the_content(); ?></p>
         <hr />
+
+        <div class="row">
+            <div class="col-xs-6 text-left"><?php previous_post_link() ?></div>
+            <div class="col-xs-6 text-right"><?php next_post_link() ?></div>
+        </div>
         <?php if (comments_open()) comments_template() ?>
 <?php
     endwhile;
