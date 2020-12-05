@@ -60,3 +60,5 @@ function twentytwentyone_widget_setup()
     );
 }
 add_action('widgets_init', 'twentytwentyone_widget_setup');
+
+require get_template_directory() . '/inc/walker.php';
