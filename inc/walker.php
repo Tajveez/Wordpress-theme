@@ -12,6 +12,12 @@ class Walker_Nav_Primary extends Walker_Nav_Menu
 
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
+        $indent = ($depth) ? str_repeat('\t', $depth) : '';
+        $li_attributes = '';
+        $class_names = $value = '';
+
+        $classes = empty($item->classes) ? array() : (array)$item->classes;
+        $classes[] = ($args->has_children) ? 'dropdown' : '';
     }
 
     /*
